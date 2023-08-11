@@ -26,4 +26,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: chemsorly/elasticsearch-ocr:latest
+          tags: chemsorly/elasticsearch-ocr:latest,chemsorly/elasticsearch-ocr:8.8.2
