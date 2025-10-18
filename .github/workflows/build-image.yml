@@ -2,8 +2,9 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ "main" ]
-  workflow_dispatch:
+    branches:
+      - main
+  pull_request:
 
 jobs:
   docker:
@@ -24,5 +25,5 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
-          push: true
+          push: ${{ github.ref == 'refs/heads/main' }}
           tags: chemsorly/elasticsearch-ocr:latest,chemsorly/elasticsearch-ocr:8.8.2
