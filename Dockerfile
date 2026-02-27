@@ -1,4 +1,4 @@
-FROM docker.elastic.co/elasticsearch/elasticsearch:8.19.8
+FROM docker.elastic.co/elasticsearch/elasticsearch:8.19.12
 RUN /usr/share/elasticsearch/bin/elasticsearch-plugin install --batch ingest-attachment
 USER 0
 RUN apt-get update
